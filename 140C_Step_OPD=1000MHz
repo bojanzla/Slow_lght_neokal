@@ -2246,36 +2246,4 @@ plt.grid()
 #plt.ylim(ymax=145)
 plt.legend(loc='upper left')
 
-plt.subplot(222)
-plt.title('Fractional delay i broadening PROBE vs TPD')
-
-frac_prob_smooth = spline(xTPD,frac_prob_list,xnew)
-prob_dist_smooth = spline(xTPD,prob_dist_list,xnew)
-
-plt.plot(xnew,frac_prob_smooth,label='Frac delay(x100)',color='k')
-plt.plot(xnew,prob_dist_smooth,label='Broadening (%)',color='b')
-plt.plot(xTPD,frac_prob_list_100,'ko')
-plt.plot(xTPD,prob_dist_list,'bo')
-plt.xlabel('Two photon detuning [MHz]',fontsize=14)
-plt.ylabel('Broadening and Frac delay',fontsize=14)
-plt.grid()
-plt.ylim(ymax=240)
-plt.legend(loc='upper left')
- 
-plt.subplot(223)
-plt.title('Fractional delay i broadening CONJUGATE vs TPD')
-
-frac_conj_smooth = spline(xTPD,frac_conj_list,xnew)
-conj_dist_smooth = spline(xTPD,conj_dist_list,xnew)
-
-plt.plot(xnew,frac_conj_smooth, label='Frac delay(x100)',color='k')
-plt.plot(xnew,conj_dist_smooth, label='Broadening (%)',color='b')
-plt.plot(xTPD,frac_conj_list,'ko')
-plt.plot(xTPD,conj_dist_list,'bo')
-plt.xlabel('Two photon detuning [MHz]',fontsize=14)
-plt.ylabel('Broadening and Frac delay',fontsize=14)
-plt.grid()
-plt.ylim(ymax=170)
-plt.legend(loc='upper left')
- 
 plt.show()
